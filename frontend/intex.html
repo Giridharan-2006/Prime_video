@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Video Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-play-circle"></i>
+                <span>Prime Video</span>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search movies, shows, genres...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="nav-right">
+                <button class="nav-btn"><i class="fas fa-bell"></i></button>
+                <button class="nav-btn"><i class="fas fa-user-circle"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div id="heroCarousel" class="hero-carousel">
+            <div class="hero-item">
+                <div class="hero-content">
+                    <h1>The Boys</h1>
+                    <p>An irreverent take on what it would really take to become a superhero in the real world.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-play" id="playBtn"><i class="fas fa-play"></i> Play</button>
+                        <button class="btn btn-info"><i class="fas fa-info-circle"></i> More Info</button>
+                    </div>
+                </div>
+                <img src="https://via.placeholder.com/1200x400?text=The+Boys" alt="The Boys">
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Player Modal -->
+    <div id="playerModal" class="modal">
+        <div class="player-container">
+            <button class="close-btn" id="closePlayer">&times;</button>
+            <video id="videoPlayer" controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <!-- Categories Section -->
+    <div class="categories-tabs">
+        <button class="category-tab active" data-category="all">All</button>
+        <button class="category-tab" data-category="action">Action</button>
+        <button class="category-tab" data-category="comedy">Comedy</button>
+        <button class="category-tab" data-category="drama">Drama</button>
+        <button class="category-tab" data-category="horror">Horror</button>
+        <button class="category-tab" data-category="sci-fi">Sci-Fi</button>
+    </div>
+
+    <!-- Content Sections -->
+    <section class="content-section">
+        <h2>Trending Now</h2>
+        <div id="trendingContent" class="content-grid"></div>
+    </section>
+
+    <section class="content-section">
+        <h2>Recommended For You</h2>
+        <div id="recommendedContent" class="content-grid"></div>
+    </section>
+
+    <section class="content-section">
+        <h2>Popular on Prime Video</h2>
+        <div id="popularContent" class="content-grid"></div>
+    </section>
+
+    <!-- Video Detail Modal -->
+    <div id="detailModal" class="modal detail-modal">
+        <div class="detail-content">
+            <button class="close-btn" id="closeDetail">&times;</button>
+            <div class="detail-poster">
+                <img id="detailImage" src="" alt="">
+                <div class="detail-overlay">
+                    <button class="btn btn-play-large" id="detailPlayBtn">
+                        <i class="fas fa-play"></i> Play
+                    </button>
+                </div>
+            </div>
+            <div class="detail-info">
+                <h2 id="detailTitle"></h2>
+                <div class="detail-meta">
+                    <span id="detailRating"></span>
+                    <span id="detailYear"></span>
+                    <span id="detailGenre"></span>
+                </div>
+                <p id="detailDescription"></p>
+                <div class="detail-buttons">
+                    <button class="btn btn-play"><i class="fas fa-play"></i> Watch Now</button>
+                    <button class="btn btn-watchlist"><i class="fas fa-heart"></i> Add to Watchlist</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Prime Video Clone. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
